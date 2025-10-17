@@ -4,7 +4,7 @@ Use the business profile loaded from:
 
     -me/about_business.pdf
 
-    -me/business_summary.txt
+    -me/summary.txt
 
 Capabilities:
 
