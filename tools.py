@@ -1,10 +1,8 @@
-import os
 from pathlib import Path
 import csv, json, datetime
 
 
-# Use DATA_DIR if provided (e.g., set to "/data" on Spaces), else local "data/"
-DATA_DIR = Path(os.getenv("DATA_DIR", "data"))
+DATA_DIR = Path("data")
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -36,3 +34,4 @@ def record_feedback(question: str) -> str:
         f.write(json.dumps(entry) + "\n")
     print(f"[FEEDBACK] {question}")
     return "Got it - I've logged your question for the team."
+
