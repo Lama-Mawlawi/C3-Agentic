@@ -3,7 +3,7 @@ title: Business Assistant (Gradio)
 colorFrom: indigo
 colorTo: blue
 sdk: gradio
-python_version: 3.10
+python_version: "3.10"
 app_file: app.py
 pinned: false
 license: mit
@@ -59,4 +59,3 @@ OPENAI_MODEL=gpt-4o-mini
 
 - Do not commit `.env` or private data
 - On Spaces, enable Persistent Storage to save `/data` across restarts
-
