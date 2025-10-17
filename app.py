@@ -251,6 +251,10 @@ with gr.Blocks(title="Business Assistant") as demo:
         )
 
 if __name__ == "__main__":
-    # Optional: allow choosing a custom port via env var
-    port = int(os.getenv("GRADIO_SERVER_PORT", "7860"))
-    demo.launch(server_port=port)
+    # Choose binding based on environment: localhost for dev, 0.0.0.0 for Spaces
+    port = int(os.getenv("PORT", os.getenv("GRADIO_SERVER_PORT", "7860")))
+    running_in_space = bool(os.getenv("PORT") or os.getenv("SPACE_ID") or os.getenv("HF_SPACE_ID"))
+    if running_in_space:
+        demo.launch(server_name="0.0.0.0", server_port=port)
+    else:
+        demo.launch(server_port=port)
