@@ -45,7 +45,7 @@ OPENAI_MODEL=gpt-4o-mini
 3) Place business files under `me/` as shown above
 4) Run: `python app.py` and open http://127.0.0.1:7860
 
-## Deploy on Hugging Face Spaces
+## Deploy on Hugging Face Spaces: https://huggingface.co/spaces/LamaMawalwi/Business_Assistant
 
 1) Create a Space (SDK: Gradio)
 2) Push this repo to the Space (or connect GitHub)
